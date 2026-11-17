@@ -13,7 +13,7 @@ function App() {
   const LAYERS = [
     { id :"orto", label : "Foto Orbital (HIRISE)", url: '/layers/v2/global/ortho.png', op:1},
     { id: 'hillshade', label: 'Relieve (hillshade)', url: '/layers/v2/global/hillshade.png', op: 0.4 },
-    { id: 'elev', label: 'Elevación', url: '/layers/v2/global/elev.png', op: 0.5 },
+    { id: 'elev', label: 'Elevacion', url: '/layers/v2/global/elev.png', op: 0.5 },
     { id: 'slope', label: 'Pendiente / riesgo', url: '/layers/v2/global/slope.png', op: 0.6},
   ];
   const mapEl = useRef(null), mapRef = useRef(null), overlays = useRef({}), routeGrp = useRef(null);
@@ -138,15 +138,15 @@ function App() {
    
 
   {/* 2. PANEL DE CONTROL N.I.N.O */}
-  <aside className="flex h-full w-[340px] shrink-0 flex-col border-r border-white/[0.08] bg-[#111923] xl:w-[370px]">
+  <aside className="flex h-full w-[340px] shrink-0 flex-col border-r border-white/[0.08] bg-[#181b24] xl:w-[370px]">
 
     {/* Panel header */}
     <div className="border-b border-white/[0.08] px-4 py-5">
       <div className="flex items-center justify-between">
         <div>
           <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
-            <span className="text-[9px] font-bold tracking-[0.18em] text-cyan-400">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-500" />
+            <span className="text-[9px] font-bold tracking-[0.18em] text-cyan-500">
               (Nave Interplanetaria de Nueva Orbita)
             </span>
           </div>
@@ -160,7 +160,7 @@ function App() {
           </p>
         </div>
 
-        <div className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.08] p-2">
+        <div className="rounded-lg border border-cyan-400/20  p-2">
           <Activity className="text-cyan-400" size={20} />
         </div>
       </div>
@@ -192,7 +192,7 @@ function App() {
             </p>
           </div>
 
-          <Radio className="text-cyan-400" size={16} />
+          <Radio className="text-[#81b4c9]" size={16} />
         </label>
       </section>
 
@@ -202,7 +202,7 @@ function App() {
           <h3 className="text-[10px] font-bold tracking-widest text-slate-500">
             CAPAS GEOSPACIALES
           </h3>
-          <Layers3 size={14} className="text-cyan-400" />
+          <Layers3 size={14} className="text-[#81b4c9]" />
         </div>
 
         <div className="space-y-3">
@@ -224,7 +224,7 @@ function App() {
                   {l.label}
                 </label>
 
-                <span className="text-[9px] font-bold tabular-nums text-cyan-400">
+                <span className="text-[9px] font-bold tabular-nums text-[#81b4c9]">
                   {Math.round(op[l.id] * 100)}%
                 </span>
               </div>
@@ -248,7 +248,7 @@ function App() {
       {/* Risk */}
       <section>
         <h3 className="mb-3 text-[10px] font-bold tracking-widest text-slate-500">
-          ÍNDICE DE RIESGO DE TERRENO
+          INDICE DE RIESGO DE TERRENO
         </h3>
 
         <div className="grid grid-cols-2 gap-2">
@@ -270,9 +270,9 @@ function App() {
       </section>
 
       {/* Cursor */}
-      <section className="rounded-lg border border-white/[0.07] bg-[#0C141E] p-3">
+      <section className="rounded-lg border border-white/[0.07] bg-[#151923] p-3">
         <div className="mb-3 flex items-center gap-2">
-          <Crosshair size={14} className="text-cyan-400" />
+          <Crosshair size={14} className="text-[#81b4c9]" />
           <h3 className="text-[10px] font-bold tracking-widest text-slate-400">
             CURSOR TELEMETRY
           </h3>
@@ -286,7 +286,7 @@ function App() {
 
         <p className="mt-2 text-[10px] text-slate-500">
           Clasificación:{" "}
-          <span className="text-cyan-400">
+          <span className="text-[#81b4c9]">
             {hover && !Number.isNaN(hover.slope)
               ? riskOf(hover.slope).name
               : "—"}
@@ -298,9 +298,9 @@ function App() {
       <section>
         <div className="mb-3 flex items-center justify-between">
           <h3 className="text-[10px] font-bold tracking-widest text-slate-500">
-            PLANIFICACIÓN EVA
+            PLANIFICACION EVA
           </h3>
-          <Route size={14} className="text-cyan-400" />
+          <Route size={14} className="text-[#81b4c9]" />
         </div>
 
         <div className="mb-3 grid grid-cols-2 gap-2">
@@ -340,8 +340,8 @@ function App() {
             RESULTADOS DE SIMULACIÓN
           </h3>
 
-          <div className="rounded-lg border border-cyan-400/15 bg-cyan-400/[0.05] p-3">
-            <p className="text-[9px] font-bold text-cyan-400">
+          <div className="rounded-lg border border-white-400/15 bg-[#0a0e17]/[0.05] p-3">
+            <p className="text-[9px] font-bold text-white">
               ROUTE VERDICT
             </p>
             <p className="mt-2 text-xs font-semibold text-white">
@@ -385,7 +385,7 @@ function App() {
     <div className="border-t border-white/[0.08] px-4 py-3">
       <div className="flex items-center justify-between">
         <span className="text-[9px] text-slate-500">
-          N.I.N.O TERRAIN ENGINE
+          N.I.N.O 
         </span>
         <span className="flex items-center gap-1.5 text-[9px] text-emerald-400">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
@@ -395,7 +395,7 @@ function App() {
     </div>
   </aside>
 
-  {/* 3. ÁREA GEOESPACIAL */}
+  {/* 3. AREA GEOESPACIAL */}
   <main className="flex min-w-0 flex-1 flex-col gap-3 overflow-hidden bg-[#0B1119] p-3">
 
     {/* MAPA */}
@@ -407,8 +407,8 @@ function App() {
       />
 
       {/* Map information overlay */}
-      <div className="pointer-events-none absolute left-4 top-4 rounded-lg border border-white/10 bg-[#101923]/90 px-3 py-2 backdrop-blur-md">
-        <p className="text-[9px] font-bold tracking-widest text-cyan-400">
+      <div className="pointer-events-none absolute left-4 top-4 rounded-lg border border-white/10 bg-[#0a0e17]/90 px-3 py-2 backdrop-blur-md">
+        <p className="text-[9px] font-bold tracking-widest text-white">
           JEZERO CRATER
         </p>
         <p className="mt-1 text-[9px] text-slate-400">
@@ -416,15 +416,16 @@ function App() {
         </p>
       </div>
 
-      <div className="pointer-events-none absolute bottom-4 right-4 rounded-lg border border-emerald-400/20 bg-[#101923]/90 px-3 py-2">
+      <div className="pointer-events-none absolute bottom-4 right-4 rounded-lg border border-emerald-400/20 bg-[#0a0e17]/90 px-3 py-2">
         <p className="text-[10px] font-bold text-emerald-400">
           ● ROUTE NOMINAL
         </p>
       </div>
+      
     </section>
 
     {/* ANALYSIS */}
-    <section className="flex min-h-[230px] flex-[0.75] flex-col gap-3 overflow-y-auto rounded-xl border border-white/[0.08] bg-[#111923] p-4">
+    <section className="flex min-h-[230px] flex-[0.75] flex-col gap-3 overflow-y-auto rounded-xl border border-white/[0.08] bg-[#181b24] p-4">
 
       {result ? (
         <>
@@ -432,7 +433,7 @@ function App() {
           <div>
             <div className="mb-3 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Activity size={15} className="text-cyan-400" />
+                <Activity size={15} className="text-[#81b4c9]" />
                 <h3 className="text-[11px] font-bold tracking-wider text-slate-200">
                   PERFIL ALTIMÉTRICO LONGITUDINAL
                 </h3>
@@ -443,7 +444,9 @@ function App() {
               </span>
             </div>
 
-            <Profile samples={result.samples} />
+            <div className="bg-white/[0.035] rounded-2xl p-2">
+              <Profile samples={result.samples} />
+            </div>
           </div>
 
           {/* Briefing */}
