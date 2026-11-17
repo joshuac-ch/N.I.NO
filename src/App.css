@@ -194,6 +194,6 @@ html, body, #root { margin: 0; height: 100%; }
 .hover { font-size: 13px; color: #9ab; }
 .verdict { font-weight: 700; font-size: 16px; margin: 8px 0; }
 .panel ul { padding-left: 18px; font-size: 13px; line-height: 1.6; }
-.profile { background: #0d0f13; border-radius: 6px; }
+.profile { border-radius: 6px;}
 button { padding: 4px 10px; cursor: pointer; }
-.leaflet-container { background: #0d0f13; }
+.leaflet-container { background: #181b24; }
