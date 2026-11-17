@@ -31,8 +31,8 @@ export const sampleAt = (t, lat, lng) => ({
 
 export const RISK = [
   { max: 10, name: 'Seguro', color: '#2ea043' },
-  { max: 20, name: 'Precaución', color: '#f0c828' },
-  { max: 30, name: 'Difícil', color: '#eb781e' },
+  { max: 20, name: 'Precaucion', color: '#f0c828' },
+  { max: 30, name: 'Dificil', color: '#eb781e' },
   { max: Infinity, name: 'No transitable', color: '#d22828' },
 ];
 export const riskOf = (s) =>

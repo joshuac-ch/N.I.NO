@@ -29,7 +29,7 @@ export default function Navbar({
   onAbort,
 }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-40 flex h-[76px] w-full items-center justify-between border-b border-white/[0.08] bg-[#151e29]/95 px-5 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 flex h-[76px] w-full items-center justify-between border-b border-white/[0.08] bg-[#181b24]/95 px-5 backdrop-blur-xl">
 
       {/* Left: Console identity */}
       <div className="flex shrink-0 items-center gap-3">
